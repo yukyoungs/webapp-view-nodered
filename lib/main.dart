@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Node-RED Dashboard Viewer',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
         useMaterial3: true,
       ),
       home: const NodeRedDashboard(),
@@ -71,7 +71,8 @@ class _NodeRedDashboardState extends State<NodeRedDashboard> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Node-RED Dashboard'),
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        backgroundColor: Colors.white, // 하얀색으로 설정
+        foregroundColor: Colors.black, // 텍스트, 아이콘을 검정색으로 설정 (가독성 확보)
         actions: [
           IconButton(
             icon: const Icon(Icons.refresh),
