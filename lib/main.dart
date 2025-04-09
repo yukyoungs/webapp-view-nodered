@@ -71,9 +71,18 @@ class _NodeRedDashboardState extends State<NodeRedDashboard> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Node-RED Dashboard'),
-        backgroundColor: Colors.white, // 하얀색으로 설정
-        foregroundColor: Colors.black, // 텍스트, 아이콘을 검정색으로 설정 (가독성 확보)
+        title: Container(
+          alignment: Alignment.centerLeft,
+          child: SizedBox(
+            height: 40,  // 로고 높이
+            child: Image.asset(
+              'assets/logo.png',
+              fit: BoxFit.contain,
+            ),
+          ),
+        ),
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.black,
         actions: [
           IconButton(
             icon: const Icon(Icons.refresh),
