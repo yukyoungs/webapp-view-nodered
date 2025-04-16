@@ -1,16 +1,31 @@
 # webapp_view_nodered
 
-A new Flutter project.
+Embedding the Node-RED web interface in a Flutter WebView
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+### 📌 Purpose  
+To display the Node-RED dashboard (UI) directly within a Flutter mobile or tablet app using WebView, allowing users to monitor and control IoT systems without leaving the app.
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### 🛠️ Implementation  
+- Used the `webview_flutter` package to embed a WebView widget in the Flutter app  
+- Loaded the Node-RED dashboard URL into the WebView  
+- Users can view and interact with the Node-RED UI directly inside the app
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```dart
+WebView(
+  initialUrl: 'http://<YOUR_NODE_RED_IP>:1880/ui',
+  javascriptMode: JavascriptMode.unrestricted,
+);
+```
+
+---
+
+### ⚠️ Considerations  
+- The Node-RED server must be accessible on the same local network (e.g., Wi-Fi)  
+- On Android, `android:usesCleartextTraffic="true"` must be added to allow HTTP access  
+- Additional configuration might be needed for CORS, SSL certificates, or remote access
+
+---
