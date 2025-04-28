@@ -77,12 +77,13 @@ class _NodeRedDashboardState extends State<NodeRedDashboard> {
           child: SizedBox(
             height: 40,  // 로고 높이
             child: Image.asset(
-              'assets/logo.png',
+              'assets/logo2.png',
               fit: BoxFit.contain,
             ),
           ),
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xFF262223),
+        //backgroundColor: Colors.white,
         foregroundColor: Colors.black,
         actions: [
           IconButton(
