@@ -64,7 +64,8 @@ class _NodeRedDashboardState extends State<NodeRedDashboard> {
           },
         ),
       )
-      ..loadRequest(Uri.parse('http://192.168.30.221:1880/ui'));
+      //..loadRequest(Uri.parse('http://192.168.30.221:1880/ui'));
+      ..loadRequest(Uri.parse('http://192.168.0.3:1880/ui'));
   }
 
   @override
